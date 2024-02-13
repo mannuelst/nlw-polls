@@ -2,7 +2,7 @@ import fastify from "fastify";
 
 const app = fastify()
 
-app.get('/', () => {
+app.post('/polls', (req) => {
     return 'Hello Server'
 })
 

@@ -9,3 +9,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Poll{
+  id        String @id @default(uuid())
+  title     String
+  createdAt DateTime @default(now())
+  updateAt  DateTime @default(now())
+} 
