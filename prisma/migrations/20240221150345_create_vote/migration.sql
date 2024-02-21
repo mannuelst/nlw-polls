@@ -2,8 +2,8 @@
 CREATE TABLE "Vote" (
     "id" SERIAL NOT NULL,
     "sessionId" TEXT NOT NULL,
-    "pollOptionId" TEXT NOT NULL,
     "pollId" TEXT NOT NULL,
+    "pollOptionId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Vote_pkey" PRIMARY KEY ("id")

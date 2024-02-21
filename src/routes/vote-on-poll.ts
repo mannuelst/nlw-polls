@@ -21,7 +21,7 @@ export async function voteOnPoll(app: FastifyInstance) {
 
         if (!sessionId) { //verificando se já existe uma sessão 
             sessionId = randomUUID()
-            console.log({ sessionId })
+            //console.log({ sessionId })
             reply.setCookie('session_Id', sessionId, {
                 path: '/',//em quais rotas o cookie estará on
                 maxAge: 60 * 60 * 24 * 30,//30dyas[em segundos], tempo de duração
@@ -29,7 +29,7 @@ export async function voteOnPoll(app: FastifyInstance) {
                 httpOnly: true,
             })
 
-            console.log('SAÍ')
+
         }
         await prisma.vote.create({
             data: {

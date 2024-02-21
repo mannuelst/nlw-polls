@@ -31,8 +31,8 @@ model PollOption {
 model Vote {
     id           Int      @id @default(autoincrement())
     sessionId    String
-    pollOptionId String
     pollId       String
+    pollOptionId String
     createdAt    DateTime @default(now())
 
     pollOption PollOption @relation(fields: [pollOptionId], references: [id])
