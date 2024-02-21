@@ -22,7 +22,6 @@ export async function getPoll(app: FastifyInstance) {
                     select: {
                         id: true,
                         title: true
-
                     }
 
                 }
