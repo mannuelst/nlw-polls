@@ -8,14 +8,14 @@ import { voteOnPoll } from "../routes/vote-on-poll";
 
 
 
-const PORT = process.env.PORT || 3333
+const PORT = process.env.PORT || 3
 const app = fastify({ logger: true })
 // const app = fastify()
 
 app.register(cookie, {
-    secrete: "polls-app",//um chave!!!
+    secret: "polls-app",//um chave!!!
     hook: "onRequest",
-    //  parseOptions: {}
+    // parseOptions: {}
 })
 
 app.register(createPoll)
